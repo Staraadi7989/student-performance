@@ -492,6 +492,7 @@ with tab_batch:
             data = pd.read_csv(up)
         except Exception as exc:  # noqa: BLE001
             st.error(f"Could not read the file: {exc}")
+
     elif use_sample:
         data = M["df"][KEYS].sample(25, random_state=3).round(1).reset_index(drop=True)
 
